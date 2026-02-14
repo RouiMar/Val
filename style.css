@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ce7173, #fad0c4);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+
+.active {
+    display: flex;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin: 10px;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 220px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #ff4b6e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ffe6eb;
+}
+
+.card {
+    background: white;
+    color: #ff4b6e;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#personalImage {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+
+
+#personalImage:hover {
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 6s linear infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% { bottom: -10%; opacity: 1;}
+    100% { bottom: 110%; opacity: 0;}
+}
+
+.val-card {
+    width: 250px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.val-card:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* 🌸 Bouquet */
+.bouquet {
+    width: 40%;
+    max-width: 180px;
+    margin-top: 20px;
+}
+
+
+@keyframes floatBouquet {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+/* 🌌 Stars */
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+.card-frame {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    margin-top: 20px;
+    animation: fadeCard 1s ease-in-out;
+}
+
+@keyframes fadeCard {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+
+    input {
+        width: 90%;
+    }
+
+    .val-card {
+        width: 80%;
+    }
+
+    .card-frame {
+        width: 95%;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+}

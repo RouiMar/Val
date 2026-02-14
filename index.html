@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miss ko na siya 🥲</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>Happy</h1>
+    <h1>Valentine's Day 💐</h1>
+    <h2>Mga Kupal</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name here">
+    <button onclick="checkName()">Enter</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>Is this your card?</h1>
+    <p>Swipe up or tap the card 💌</p>
+
+    <img src="images/card.png" 
+         class="val-card"
+         id="swipeCard"
+         onclick="showFinal()"
+         alt="Valentine Card">
+</div>
+
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1 id="finalMessage"></h1>
+    <p id="personalMessage"></p>
+
+    <div class="card-frame">
+        <img id="personalImage" src="" alt="Friend Picture">
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
