@@ -41,7 +41,7 @@ const people = {
     },
     "nalyn": {
         message: "Happy valentines te, swerte namin naging ate ka namin sa lifetime na to. Sana mag swimming na ulit",
-        image: "images/nalyn.jpg",
+        image: "images/paula.jpg",
         type: "cousin"
     },
     "jade": {
